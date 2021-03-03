@@ -48,4 +48,10 @@ public class nominewController {
 	public Map<String, String > elimina(@PathVariable ("id")Long id){
 	    return this.obj.eliminar(id);
 	}
+	
+	
+	@GetMapping("/general/{jpp}/{numjpp}")
+	public List<nominew> getListaNominew(@PathVariable ("jpp") String jpp  ,  @PathVariable ("numjpp") int numjpp){
+		    return this.obj.Filtrar(numjpp, jpp);
+	}
 }

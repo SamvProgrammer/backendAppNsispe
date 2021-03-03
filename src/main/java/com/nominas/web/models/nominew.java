@@ -18,6 +18,8 @@ public class nominew {
 	
 	private Long id;
     private String jpp;
+	
+
     private Integer numjpp;
     private Integer clave;
     private Integer secuen;
@@ -80,6 +82,4 @@ public class nominew {
 		this.folio = folio;
 	}
 
-    
-    
 }

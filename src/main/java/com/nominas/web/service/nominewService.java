@@ -16,6 +16,8 @@ public interface nominewService {
 	public  nominew insertar(nominew obj);
 
 	public  Map<String, String> eliminar(Long id);
+
+	public List<nominew> Filtrar(Integer num, String jpp);
 	
 	
 

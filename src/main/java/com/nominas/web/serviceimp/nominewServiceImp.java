@@ -7,6 +7,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import javax.management.Query;
+import javax.persistence.EmbeddedId;
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -55,4 +60,16 @@ public class nominewServiceImp   implements nominewService {
 		lista.put("resultado", "Registro eliminado con exito");
 		return lista;
 	}
+	
+	
+	@Override
+	public List<nominew> Filtrar(Integer numjpp , String jpp) {
+		   List<nominew> lista = new ArrayList<nominew>();
+	    this.reporitory.findByJppNum(jpp, numjpp).forEach(lista::add);
+	    return lista;
+	
+	}
+	
+	
+	
 }
