@@ -17,7 +17,15 @@ public interface nominewService {
 
 	public  Map<String, String> eliminar(Long id);
 
-	public List<nominew> Filtrar(Integer num, String jpp);
+	public List<nominew> Filtrar(Integer numjpp, String jpp , String tiponomina);
+
+	public  nominew avanzarSerie();
+
+	public Object nominaDetalle (String tipoNomina);
+	
+	public Object generaRespaldo(String quincena , String tiponomina);
+
+
 	
 	
 

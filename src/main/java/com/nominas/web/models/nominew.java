@@ -2,9 +2,12 @@ package com.nominas.web.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Columns;
@@ -16,6 +19,8 @@ public class nominew {
 	@Column(name="id_mov")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	
+	
+
 	private Long id;
     private String jpp;
 	
@@ -27,6 +32,30 @@ public class nominew {
     private Double monto;
     private String tipopago;
     private Integer folio;
+    private Integer pagon;
+    private Integer pagot;
+    private String tiponomina;
+    
+    
+	
+	public String getTiponomina() {
+		return tiponomina;
+	}
+	public void setTiponomina(String tiponomina) {
+		this.tiponomina = tiponomina;
+	}
+	public Integer getPagon() {
+		return pagon;
+	}
+	public void setPagon(Integer pagon) {
+		this.pagon = pagon;
+	}
+	public Integer getPagot() {
+		return pagot;
+	}
+	public void setPagot(Integer pagot) {
+		this.pagot = pagot;
+	}
 	public Long getId() {
 		return id;
 	}

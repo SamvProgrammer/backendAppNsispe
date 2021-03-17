@@ -29,6 +29,17 @@ public class nominewController {
 		return this.obj.getAll();
 	}
 	
+	@GetMapping("/general/nomina/{tipoNomina}")
+	public Object nominaDetalle(@PathVariable("tipoNomina") String tipoNomina) {
+		return  this.obj.nominaDetalle(tipoNomina);
+	}
+	
+	
+	@GetMapping("/general/cierre/{quincena}/{tiponomina}")
+	public Object cierreNomina(@PathVariable("quincena") String quincena , @PathVariable ("tiponomina") String tiponomina) {
+		return this.obj.generaRespaldo(quincena ,  tiponomina);
+	}
+	
 	@GetMapping("/general/{id}")
 	public nominew get(@PathVariable("id") Long id) {
 		return this.obj.get(id);
@@ -50,8 +61,13 @@ public class nominewController {
 	}
 	
 	
-	@GetMapping("/general/{jpp}/{numjpp}")
-	public List<nominew> getListaNominew(@PathVariable ("jpp") String jpp  ,  @PathVariable ("numjpp") int numjpp){
-		    return this.obj.Filtrar(numjpp, jpp);
+	@GetMapping("/general/{jpp}/{numjpp}/{tiponomina}")
+	public List<nominew> getListaNominew(@PathVariable ("jpp") String jpp  ,  @PathVariable ("numjpp") int numjpp , @PathVariable ("tiponomina") String tiponomina){
+		    return this.obj.Filtrar(numjpp, jpp, tiponomina);
+	}
+	
+	@GetMapping("general/avanzar")
+	public nominew avanzarSerie() {
+		return this.obj.avanzarSerie();
 	}
 }
