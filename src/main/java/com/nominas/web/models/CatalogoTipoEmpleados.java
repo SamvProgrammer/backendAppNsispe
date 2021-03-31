@@ -15,20 +15,20 @@ public class CatalogoTipoEmpleados {
 	@Column(name="id_tipoEm")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private Integer clave;
+	private String clave;
 	private String categoria;
 	private String cve_nivel;
-	private Integer numnivel;
+	private String numnivel;
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Integer getClave() {
+	public String getClave() {
 		return clave;
 	}
-	public void setClave(Integer clave) {
+	public void setClave(String clave) {
 		this.clave = clave;
 	}
 	public String getCategoria() {
@@ -43,10 +43,10 @@ public class CatalogoTipoEmpleados {
 	public void setCve_nivel(String cve_nivel) {
 		this.cve_nivel = cve_nivel;
 	}
-	public Integer getNumnivel() {
+	public String getNumnivel() {
 		return numnivel;
 	}
-	public void setNumnivel(Integer numnivel) {
+	public void setNumnivel(String numnivel) {
 		this.numnivel = numnivel;
 	}
 

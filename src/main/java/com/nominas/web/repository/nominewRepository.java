@@ -20,7 +20,4 @@ public interface nominewRepository  extends CrudRepository<nominew, Long>{
 	 @Transactional
 	 @Modifying(clearAutomatically=true , flushAutomatically=true)
     @Query(value ="update nominew  set pagon=pagon+1 where (pagon<=pagot)and pagon<>0 and pagot<>0; delete FROM nominew where pagon > pagot " ,nativeQuery = true)
-    void avanzaSerie();
-	 
-
-}
+    void avanzaSerie();}

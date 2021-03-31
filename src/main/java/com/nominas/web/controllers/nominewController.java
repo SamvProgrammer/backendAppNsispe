@@ -66,7 +66,7 @@ public class nominewController {
 		    return this.obj.Filtrar(numjpp, jpp, tiponomina);
 	}
 	
-	@GetMapping("general/avanzar")
+	@GetMapping("general/avanzar/{desde}/hasta")
 	public nominew avanzarSerie() {
 		return this.obj.avanzarSerie();
 	}

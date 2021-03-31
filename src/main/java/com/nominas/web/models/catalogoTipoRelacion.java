@@ -18,7 +18,7 @@ public class catalogoTipoRelacion {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	
 	private Long id;
-	private Integer clave;
+	private String clave;
 	private String descripcion;
 	public Long getId() {
 		return id;
@@ -26,10 +26,10 @@ public class catalogoTipoRelacion {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Integer getClave() {
+	public String getClave() {
 		return clave;
 	}
-	public void setClave(Integer clave) {
+	public void setClave(String clave) {
 		this.clave = clave;
 	}
 	public String getDescripcion() {
