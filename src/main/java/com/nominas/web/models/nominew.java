@@ -18,9 +18,11 @@ import org.hibernate.annotations.Columns;
 public class nominew {
 	@Id
 	@Column(name="id_mov")
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	
-	
+	@GeneratedValue(strategy = GenerationType.AUTO, generator="native")
+	@GenericGenerator(
+    name = "native",
+    strategy = "native"
+)
 
 	private Long id;
     private String jpp;
