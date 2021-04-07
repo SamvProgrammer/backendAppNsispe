@@ -55,6 +55,11 @@ public class nominewController {
 		return this.obj.insertar(obj);
 	}
 	
+	@PostMapping("/general/lista")
+	public List<nominew> InsertarVarios (@RequestBody List<nominew> obj){
+		return this.obj.InsertarVarios(obj);
+	}
+	
 	@DeleteMapping("/general/{id}")
 	public Map<String, String > elimina(@PathVariable ("id")Long id){
 	    return this.obj.eliminar(id);
@@ -66,7 +71,7 @@ public class nominewController {
 		    return this.obj.Filtrar(numjpp, jpp, tiponomina);
 	}
 	
-	@GetMapping("general/avanzar/{desde}/hasta")
+	@GetMapping("general/avanzar")
 	public nominew avanzarSerie() {
 		return this.obj.avanzarSerie();
 	}

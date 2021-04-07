@@ -25,6 +25,10 @@ public interface nominewService {
 	
 	public Object generaRespaldo(String quincena , String tiponomina);
 
+	public List<nominew> InsertarVarios(List<nominew> listaN);
+
+
+
 
 	
 	

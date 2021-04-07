@@ -40,7 +40,7 @@ public class nominewServiceImp   implements nominewService {
 	
 	@Override
 	public nominew get(Long id) {
-	Optional <nominew> nom= this.reporitory.findById(id);
+	Optional <nominew> optional= this.reporitory.findById(id);
 	return get(id);
 		
 	}
@@ -55,6 +55,15 @@ public class nominewServiceImp   implements nominewService {
 	@Override
 	public nominew insertar (nominew obj) {
 		return this.reporitory.save(obj);
+
+	}
+	
+	@Override
+	public List<nominew> InsertarVarios(List<nominew> listaN)
+	{
+		   List<nominew> lista = new ArrayList<nominew>();
+      this.reporitory.saveAll(listaN).forEach(lista::add);
+      return lista;
 	}
 	
 	@Override

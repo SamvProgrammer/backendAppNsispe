@@ -10,19 +10,18 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 
 import org.hibernate.annotations.Columns;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="nominew")
+
 public class nominew {
 	@Id
 	@Column(name="id_mov")
-	@GeneratedValue(strategy = GenerationType.AUTO, generator="native")
-	@GenericGenerator(
-    name = "native",
-    strategy = "native"
-)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 
 	private Long id;
     private String jpp;
@@ -41,6 +40,8 @@ public class nominew {
     
     
 	
+    
+    
 	public String getTiponomina() {
 		return tiponomina;
 	}

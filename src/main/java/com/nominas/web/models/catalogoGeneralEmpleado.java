@@ -70,6 +70,14 @@ public class catalogoGeneralEmpleado {
 	 private Date gufdes;
 	 private Date gufhas;
 	 private Date  infdes;
+	 public Date getInfhas() {
+		return infhas;
+	}
+	public void setInfhas(Date infhas) {
+		this.infhas = infhas;
+	}
+	private Date  infhas;
+
 	 private Double  mot;
 	 private Double uimss;
 	 private Double uoimss;
