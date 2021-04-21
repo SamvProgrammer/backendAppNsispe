@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.nominas.web.repository.catalogoEmpleadoGeneralRepository;
 import com.nominas.web.service.catalogoEmpleadoGeneralService;
-import com.nominas.web.models.catalogoGeneralEmpleado;;
+import com.nominas.web.models.catalogoGeneralEmpleado;
 
 
 @Service
@@ -50,5 +50,15 @@ public class catalogoEmpleadoGeneralServiceImp implements catalogoEmpleadoGenera
 		resultado.put("resultado", "Registro eliminado con exito");
 		return resultado;
 	}
+	
+	
+	@Override
+	public List<catalogoGeneralEmpleado> InsertarVarios(List<catalogoGeneralEmpleado> listaE)
+	{
+		   List<catalogoGeneralEmpleado> lista = new ArrayList<catalogoGeneralEmpleado>();
+		   this.repository.saveAll(listaE).forEach(lista::add);
+      return lista;
+	}
+	
 
 }

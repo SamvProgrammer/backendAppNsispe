@@ -17,4 +17,9 @@ public interface catalogoEmpleadoGeneralService {
 
 	public  Map<String, String> elimina(Long id);
 
+	public  List<catalogoGeneralEmpleado> InsertarVarios(List<catalogoGeneralEmpleado> listaE);
+
+
+
+
 }

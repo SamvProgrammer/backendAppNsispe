@@ -59,7 +59,7 @@ public class nominewController {
 	public List<nominew> InsertarVarios (@RequestBody List<nominew> obj){
 		return this.obj.InsertarVarios(obj);
 	}
-	
+ 	
 	@DeleteMapping("/general/{id}")
 	public Map<String, String > elimina(@PathVariable ("id")Long id){
 	    return this.obj.eliminar(id);

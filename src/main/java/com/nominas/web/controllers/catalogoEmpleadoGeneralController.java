@@ -50,4 +50,11 @@ public class catalogoEmpleadoGeneralController {
   public Map<String , String> elimina(@PathVariable("id") Long id){
 	  return this.obj.elimina(id);
   }
+  
+  
+  @PostMapping("/general/lista")
+  public List<catalogoGeneralEmpleado> InsertarVarios (@RequestBody List<catalogoGeneralEmpleado> obj)
+  {
+	  return this.obj.InsertarVarios(obj);
+  }
 }

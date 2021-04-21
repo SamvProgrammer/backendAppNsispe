@@ -70,12 +70,7 @@ public class catalogoGeneralEmpleado {
 	 private Date gufdes;
 	 private Date gufhas;
 	 private Date  infdes;
-	 public Date getInfhas() {
-		return infhas;
-	}
-	public void setInfhas(Date infhas) {
-		this.infhas = infhas;
-	}
+	
 	private Date  infhas;
 
 	 private Double  mot;
@@ -89,6 +84,16 @@ public class catalogoGeneralEmpleado {
 	 private Date fpuesto;
 	 private String esppadre;
 	 private String indisindi;
+	 private String correo;
+	 
+	 
+	 
+	public String getCorreo() {
+		return correo;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -443,6 +448,12 @@ public class catalogoGeneralEmpleado {
 	}
 	public void setEsppadre(String esppadre) {
 		this.esppadre = esppadre;
+	}
+	public Date getInfhas() {
+		return infhas;
+	}
+	public void setInfhas(Date infhas) {
+		this.infhas = infhas;
 	}
 	 
 	 
